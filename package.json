@@ -36,9 +36,8 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-unused-vars": "error",
-      "no-console": "error",
-      "no-debugger": "error",
+      "no-console": "warn",
+      "no-debugger": "warn",
       "quotes": [
         "error",
         "single"
