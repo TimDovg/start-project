@@ -1,17 +1,19 @@
-// eslint-disable-next-line
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import PlanetsContainer from './containers/PlanetsContainer'
-import Navigation from './components/Navigation'
+import PlanetsContainer from 'Containers/PlanetsContainer'
+import Navigation from 'Components/Navigation'
+import PlanetsState from 'Context/Planets/PlanetsState'
 
 function App() {
   return (
     <>
-      <Navigation />
-      <Switch>
-        <Route path="/planets" component={PlanetsContainer} />
-        <Redirect to="/planets" />
-      </Switch>
+        <PlanetsState>
+            <Navigation />
+            <Switch>
+                <Route path="/planets" component={PlanetsContainer} />
+                <Redirect to="/planets" />
+            </Switch>
+        </PlanetsState>
     </>
   )
 }

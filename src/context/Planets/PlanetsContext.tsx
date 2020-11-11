@@ -1,3 +1,7 @@
 import { createContext } from 'react'
 
-export const AuthContext = createContext()
+import { PlanetsContextType } from 'Types/PlanetsTypes/PlanetsTypes'
+
+const PlanetsContext = createContext<Partial<PlanetsContextType>>({})
+
+export default PlanetsContext
